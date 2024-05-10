@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let options = {
+            method:'POST',
+            headers :{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                title:"this is title",
+                number:100,
+                data:"this is data and thid data is post in api throw post method"
+                
+            })
+        }
+        let p = fetch("https://goweather.herokuapp.com/weather/Ny");
+        p.then((response)=>{return response.json()})
+        .then((json)=>{console.log(json)})
+    </script>
+</body>
+</html>
